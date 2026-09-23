@@ -1,0 +1,6 @@
+[
+  {"id":"demo-http","protocol":"http","address":"http://127.0.0.1:8085/ok"},
+  {"id":"demo-tcp","protocol":"tcp","address":"127.0.0.1:8085"},
+  {"id":"demo-failure","protocol":"http","address":"http://127.0.0.1:8085/fail"},
+  {"id":"demo-timeout","protocol":"http","address":"http://127.0.0.1:8085/slow"}
+]

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package probe.v1;
+option go_package = "github.com/Astro1ot/go-netprobe/gen/probe/v1;probev1";
+
+service ProbeService {
+  rpc Check(CheckRequest) returns (CheckResponse);
+}
+message CheckRequest { repeated string target_ids = 1; }
+message Result {
+  string target_id = 1;
+  string protocol = 2;
+  bool up = 3;
+  int64 latency_ms = 4;
+  int32 status_code = 5;
+  string error = 6;
+}
+message CheckResponse { repeated Result results = 1; }
